@@ -1,0 +1,38 @@
+{
+    "model": {
+        "name": "SSIM_Net",
+        "type": "Encoder",
+        "code_dim": 256,
+        "img_channel": 3,
+        "fp16": false
+    },
+    "op": {
+        "loss": "Multi_SSIM_loss",
+        "window_size":[3, 7, 15],
+
+        "start_epoch": 0,
+        "max_epoch": 120,
+        "snapshot": 10,
+        "learning_rate": 1e-3,
+        "decay_rate": 10,
+        "epoch_steps": [50, 120]
+    },
+    "db": {
+        "name": "mvtec",
+        "data_dir": "/home/xiongpan/dataset/defect_detect/dataset",
+        "loader_threads": 0,
+        "train_split": "train",
+        "use_validation_set": false,
+        "validation_split": "validation",
+        "val_split": "test",
+        "resize": [128, 128],
+        "batch_size": 128
+    },
+    "system": {
+        "resume": false,
+        "resume_path": "",
+        "finetune": false,
+        "finetune_path": "",
+        "save_dir": "./weights/"
+    }
+}

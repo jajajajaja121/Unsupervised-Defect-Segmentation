@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python test.py --cfg="SSIM-mvtec" --model_path="weights/SSIM-mvtec-90.pth"

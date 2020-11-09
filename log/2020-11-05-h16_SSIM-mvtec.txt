@@ -1,0 +1,229 @@
+model:
+    name: SSIM_Net
+    type: Encoder
+    code_dim: 256
+    img_channel: 3
+    fp16: False
+op:
+    loss: Multi_SSIM_loss
+    window_size: [3, 7, 15]
+    start_epoch: 0
+    max_epoch: 120
+    snapshot: 10
+    learning_rate: 0.001
+    decay_rate: 10
+    epoch_steps: [50, 120]
+db:
+    name: mvtec
+    data_dir: /home/xiongpan/dataset/defect_detect/dataset
+    loader_threads: 0
+    train_split: train
+    use_validation_set: False
+    validation_split: validation
+    val_split: test
+    resize: [128, 128]
+    batch_size: 128
+system:
+    resume: False
+    resume_path: 
+    finetune: False
+    finetune_path: 
+    save_dir: ./weights/
+loss:
+Epoch:1||epochiter: 0/193||Totel iter: 0||size0 ssim loss:-0.0572; size1 ssim loss:-0.0695; size2 ssim loss:-0.0735; ||LR: 0.00000100||Batch time: 2.0776 sec.
+Epoch:1||epochiter: 10/193||Totel iter: 10||size0 ssim loss:-0.1318; size1 ssim loss:-0.1298; size2 ssim loss:-0.1341; ||LR: 0.00001135||Batch time: 0.3670 sec.
+Epoch:1||epochiter: 20/193||Totel iter: 20||size0 ssim loss:-0.4168; size1 ssim loss:-0.3965; size2 ssim loss:-0.3953; ||LR: 0.00002170||Batch time: 0.3641 sec.
+Epoch:1||epochiter: 30/193||Totel iter: 30||size0 ssim loss:-0.4751; size1 ssim loss:-0.4452; size2 ssim loss:-0.4412; ||LR: 0.00003206||Batch time: 0.3636 sec.
+Epoch:1||epochiter: 40/193||Totel iter: 40||size0 ssim loss:-0.5345; size1 ssim loss:-0.5046; size2 ssim loss:-0.5004; ||LR: 0.00004241||Batch time: 0.3737 sec.
+Epoch:1||epochiter: 50/193||Totel iter: 50||size0 ssim loss:-0.5432; size1 ssim loss:-0.4959; size2 ssim loss:-0.4885; ||LR: 0.00005276||Batch time: 0.3845 sec.
+Epoch:1||epochiter: 60/193||Totel iter: 60||size0 ssim loss:-0.6082; size1 ssim loss:-0.5462; size2 ssim loss:-0.5368; ||LR: 0.00006311||Batch time: 0.3683 sec.
+Epoch:1||epochiter: 70/193||Totel iter: 70||size0 ssim loss:-0.6108; size1 ssim loss:-0.5562; size2 ssim loss:-0.5475; ||LR: 0.00007347||Batch time: 0.3542 sec.
+Epoch:1||epochiter: 80/193||Totel iter: 80||size0 ssim loss:-0.5821; size1 ssim loss:-0.5214; size2 ssim loss:-0.5114; ||LR: 0.00008382||Batch time: 0.3783 sec.
+Epoch:1||epochiter: 90/193||Totel iter: 90||size0 ssim loss:-0.5863; size1 ssim loss:-0.5208; size2 ssim loss:-0.5108; ||LR: 0.00009417||Batch time: 0.3673 sec.
+Epoch:1||epochiter: 100/193||Totel iter: 100||size0 ssim loss:-0.5899; size1 ssim loss:-0.5336; size2 ssim loss:-0.5244; ||LR: 0.00010452||Batch time: 0.3679 sec.
+Epoch:1||epochiter: 110/193||Totel iter: 110||size0 ssim loss:-0.5977; size1 ssim loss:-0.5438; size2 ssim loss:-0.5347; ||LR: 0.00011488||Batch time: 0.3408 sec.
+Epoch:1||epochiter: 120/193||Totel iter: 120||size0 ssim loss:-0.5687; size1 ssim loss:-0.5185; size2 ssim loss:-0.5098; ||LR: 0.00012523||Batch time: 0.3622 sec.
+Epoch:1||epochiter: 130/193||Totel iter: 130||size0 ssim loss:-0.5725; size1 ssim loss:-0.5153; size2 ssim loss:-0.5056; ||LR: 0.00013558||Batch time: 0.3728 sec.
+Epoch:1||epochiter: 140/193||Totel iter: 140||size0 ssim loss:-0.6150; size1 ssim loss:-0.5614; size2 ssim loss:-0.5526; ||LR: 0.00014593||Batch time: 0.3621 sec.
+Epoch:1||epochiter: 150/193||Totel iter: 150||size0 ssim loss:-0.5747; size1 ssim loss:-0.5142; size2 ssim loss:-0.5037; ||LR: 0.00015628||Batch time: 0.3960 sec.
+Epoch:1||epochiter: 160/193||Totel iter: 160||size0 ssim loss:-0.6067; size1 ssim loss:-0.5492; size2 ssim loss:-0.5393; ||LR: 0.00016664||Batch time: 0.3708 sec.
+Epoch:1||epochiter: 170/193||Totel iter: 170||size0 ssim loss:-0.6120; size1 ssim loss:-0.5545; size2 ssim loss:-0.5451; ||LR: 0.00017699||Batch time: 0.3720 sec.
+Epoch:1||epochiter: 180/193||Totel iter: 180||size0 ssim loss:-0.6154; size1 ssim loss:-0.5617; size2 ssim loss:-0.5528; ||LR: 0.00018734||Batch time: 0.3749 sec.
+Epoch:1||epochiter: 190/193||Totel iter: 190||size0 ssim loss:-0.6183; size1 ssim loss:-0.5594; size2 ssim loss:-0.5503; ||LR: 0.00019769||Batch time: 0.3779 sec.
+Epoch:2||epochiter: 7/193||Totel iter: 200||size0 ssim loss:-0.6285; size1 ssim loss:-0.5745; size2 ssim loss:-0.5672; ||LR: 0.00020805||Batch time: 0.3870 sec.
+Epoch:2||epochiter: 17/193||Totel iter: 210||size0 ssim loss:-0.6067; size1 ssim loss:-0.5507; size2 ssim loss:-0.5433; ||LR: 0.00021840||Batch time: 0.3658 sec.
+Epoch:2||epochiter: 27/193||Totel iter: 220||size0 ssim loss:-0.6272; size1 ssim loss:-0.5762; size2 ssim loss:-0.5694; ||LR: 0.00022875||Batch time: 0.3852 sec.
+Epoch:2||epochiter: 37/193||Totel iter: 230||size0 ssim loss:-0.6204; size1 ssim loss:-0.5689; size2 ssim loss:-0.5621; ||LR: 0.00023910||Batch time: 0.3533 sec.
+Epoch:2||epochiter: 47/193||Totel iter: 240||size0 ssim loss:-0.6244; size1 ssim loss:-0.5760; size2 ssim loss:-0.5708; ||LR: 0.00024946||Batch time: 0.3709 sec.
+Epoch:2||epochiter: 57/193||Totel iter: 250||size0 ssim loss:-0.6547; size1 ssim loss:-0.5989; size2 ssim loss:-0.5930; ||LR: 0.00025981||Batch time: 0.3583 sec.
+Epoch:2||epochiter: 67/193||Totel iter: 260||size0 ssim loss:-0.6387; size1 ssim loss:-0.5901; size2 ssim loss:-0.5843; ||LR: 0.00027016||Batch time: 0.3769 sec.
+Epoch:2||epochiter: 77/193||Totel iter: 270||size0 ssim loss:-0.6360; size1 ssim loss:-0.5880; size2 ssim loss:-0.5832; ||LR: 0.00028051||Batch time: 0.3665 sec.
+Epoch:2||epochiter: 87/193||Totel iter: 280||size0 ssim loss:-0.6800; size1 ssim loss:-0.6301; size2 ssim loss:-0.6249; ||LR: 0.00029087||Batch time: 0.3756 sec.
+Epoch:2||epochiter: 97/193||Totel iter: 290||size0 ssim loss:-0.6676; size1 ssim loss:-0.6164; size2 ssim loss:-0.6122; ||LR: 0.00030122||Batch time: 0.3777 sec.
+Epoch:2||epochiter: 107/193||Totel iter: 300||size0 ssim loss:-0.6636; size1 ssim loss:-0.6177; size2 ssim loss:-0.6129; ||LR: 0.00031157||Batch time: 0.3697 sec.
+Epoch:2||epochiter: 117/193||Totel iter: 310||size0 ssim loss:-0.6605; size1 ssim loss:-0.6108; size2 ssim loss:-0.6062; ||LR: 0.00032192||Batch time: 0.3577 sec.
+Epoch:2||epochiter: 127/193||Totel iter: 320||size0 ssim loss:-0.6580; size1 ssim loss:-0.6114; size2 ssim loss:-0.6081; ||LR: 0.00033227||Batch time: 0.3472 sec.
+Epoch:2||epochiter: 137/193||Totel iter: 330||size0 ssim loss:-0.6717; size1 ssim loss:-0.6259; size2 ssim loss:-0.6215; ||LR: 0.00034263||Batch time: 0.3551 sec.
+Epoch:2||epochiter: 147/193||Totel iter: 340||size0 ssim loss:-0.6890; size1 ssim loss:-0.6410; size2 ssim loss:-0.6355; ||LR: 0.00035298||Batch time: 0.4050 sec.
+Epoch:2||epochiter: 157/193||Totel iter: 350||size0 ssim loss:-0.6585; size1 ssim loss:-0.6143; size2 ssim loss:-0.6098; ||LR: 0.00036333||Batch time: 0.3738 sec.
+Epoch:2||epochiter: 167/193||Totel iter: 360||size0 ssim loss:-0.6610; size1 ssim loss:-0.6185; size2 ssim loss:-0.6158; ||LR: 0.00037368||Batch time: 0.3789 sec.
+Epoch:2||epochiter: 177/193||Totel iter: 370||size0 ssim loss:-0.6542; size1 ssim loss:-0.6049; size2 ssim loss:-0.5991; ||LR: 0.00038404||Batch time: 0.3659 sec.
+Epoch:2||epochiter: 187/193||Totel iter: 380||size0 ssim loss:-0.6902; size1 ssim loss:-0.6547; size2 ssim loss:-0.6525; ||LR: 0.00039439||Batch time: 0.3755 sec.
+Epoch:3||epochiter: 4/193||Totel iter: 390||size0 ssim loss:-0.7128; size1 ssim loss:-0.6773; size2 ssim loss:-0.6740; ||LR: 0.00040474||Batch time: 0.3627 sec.
+Epoch:3||epochiter: 14/193||Totel iter: 400||size0 ssim loss:-0.6976; size1 ssim loss:-0.6618; size2 ssim loss:-0.6581; ||LR: 0.00041509||Batch time: 0.4003 sec.
+Epoch:3||epochiter: 24/193||Totel iter: 410||size0 ssim loss:-0.6780; size1 ssim loss:-0.6410; size2 ssim loss:-0.6384; ||LR: 0.00042545||Batch time: 0.3606 sec.
+Epoch:3||epochiter: 34/193||Totel iter: 420||size0 ssim loss:-0.7249; size1 ssim loss:-0.6866; size2 ssim loss:-0.6833; ||LR: 0.00043580||Batch time: 0.3665 sec.
+Epoch:3||epochiter: 44/193||Totel iter: 430||size0 ssim loss:-0.7245; size1 ssim loss:-0.6992; size2 ssim loss:-0.6983; ||LR: 0.00044615||Batch time: 0.3613 sec.
+Epoch:3||epochiter: 54/193||Totel iter: 440||size0 ssim loss:-0.7316; size1 ssim loss:-0.7019; size2 ssim loss:-0.7005; ||LR: 0.00045650||Batch time: 0.3605 sec.
+Epoch:3||epochiter: 64/193||Totel iter: 450||size0 ssim loss:-0.7119; size1 ssim loss:-0.6873; size2 ssim loss:-0.6866; ||LR: 0.00046685||Batch time: 0.3633 sec.
+Epoch:3||epochiter: 74/193||Totel iter: 460||size0 ssim loss:-0.7310; size1 ssim loss:-0.7052; size2 ssim loss:-0.7046; ||LR: 0.00047721||Batch time: 0.3714 sec.
+Epoch:3||epochiter: 84/193||Totel iter: 470||size0 ssim loss:-0.7195; size1 ssim loss:-0.6809; size2 ssim loss:-0.6785; ||LR: 0.00048756||Batch time: 0.3623 sec.
+Epoch:3||epochiter: 94/193||Totel iter: 480||size0 ssim loss:-0.7179; size1 ssim loss:-0.6972; size2 ssim loss:-0.6959; ||LR: 0.00049791||Batch time: 0.3487 sec.
+Epoch:3||epochiter: 104/193||Totel iter: 490||size0 ssim loss:-0.7022; size1 ssim loss:-0.6760; size2 ssim loss:-0.6741; ||LR: 0.00050826||Batch time: 0.3499 sec.
+Epoch:3||epochiter: 114/193||Totel iter: 500||size0 ssim loss:-0.7425; size1 ssim loss:-0.7184; size2 ssim loss:-0.7178; ||LR: 0.00051862||Batch time: 0.3745 sec.
+Epoch:3||epochiter: 124/193||Totel iter: 510||size0 ssim loss:-0.7197; size1 ssim loss:-0.6992; size2 ssim loss:-0.6981; ||LR: 0.00052897||Batch time: 0.3729 sec.
+Epoch:3||epochiter: 134/193||Totel iter: 520||size0 ssim loss:-0.7546; size1 ssim loss:-0.7324; size2 ssim loss:-0.7319; ||LR: 0.00053932||Batch time: 0.3371 sec.
+Epoch:3||epochiter: 144/193||Totel iter: 530||size0 ssim loss:-0.7404; size1 ssim loss:-0.7189; size2 ssim loss:-0.7180; ||LR: 0.00054967||Batch time: 0.3391 sec.
+Epoch:3||epochiter: 154/193||Totel iter: 540||size0 ssim loss:-0.7501; size1 ssim loss:-0.7271; size2 ssim loss:-0.7263; ||LR: 0.00056003||Batch time: 0.3642 sec.
+Epoch:3||epochiter: 164/193||Totel iter: 550||size0 ssim loss:-0.7686; size1 ssim loss:-0.7476; size2 ssim loss:-0.7472; ||LR: 0.00057038||Batch time: 0.3687 sec.
+Epoch:3||epochiter: 174/193||Totel iter: 560||size0 ssim loss:-0.7609; size1 ssim loss:-0.7325; size2 ssim loss:-0.7307; ||LR: 0.00058073||Batch time: 0.4938 sec.
+Epoch:3||epochiter: 184/193||Totel iter: 570||size0 ssim loss:-0.7630; size1 ssim loss:-0.7430; size2 ssim loss:-0.7423; ||LR: 0.00059108||Batch time: 0.3520 sec.
+Epoch:4||epochiter: 1/193||Totel iter: 580||size0 ssim loss:-0.7684; size1 ssim loss:-0.7497; size2 ssim loss:-0.7495; ||LR: 0.00060144||Batch time: 0.3551 sec.
+Epoch:4||epochiter: 11/193||Totel iter: 590||size0 ssim loss:-0.7612; size1 ssim loss:-0.7417; size2 ssim loss:-0.7406; ||LR: 0.00061179||Batch time: 0.3598 sec.
+Epoch:4||epochiter: 21/193||Totel iter: 600||size0 ssim loss:-0.7584; size1 ssim loss:-0.7403; size2 ssim loss:-0.7395; ||LR: 0.00062214||Batch time: 0.3676 sec.
+Epoch:4||epochiter: 31/193||Totel iter: 610||size0 ssim loss:-0.7508; size1 ssim loss:-0.7292; size2 ssim loss:-0.7282; ||LR: 0.00063249||Batch time: 0.3856 sec.
+Epoch:4||epochiter: 41/193||Totel iter: 620||size0 ssim loss:-0.7869; size1 ssim loss:-0.7701; size2 ssim loss:-0.7704; ||LR: 0.00064284||Batch time: 0.3175 sec.
+Epoch:4||epochiter: 51/193||Totel iter: 630||size0 ssim loss:-0.7672; size1 ssim loss:-0.7486; size2 ssim loss:-0.7481; ||LR: 0.00065320||Batch time: 0.3754 sec.
+Epoch:4||epochiter: 61/193||Totel iter: 640||size0 ssim loss:-0.7617; size1 ssim loss:-0.7430; size2 ssim loss:-0.7422; ||LR: 0.00066355||Batch time: 0.3967 sec.
+Epoch:4||epochiter: 71/193||Totel iter: 650||size0 ssim loss:-0.7745; size1 ssim loss:-0.7577; size2 ssim loss:-0.7577; ||LR: 0.00067390||Batch time: 0.3770 sec.
+Epoch:4||epochiter: 81/193||Totel iter: 660||size0 ssim loss:-0.7774; size1 ssim loss:-0.7582; size2 ssim loss:-0.7578; ||LR: 0.00068425||Batch time: 0.3730 sec.
+Epoch:4||epochiter: 91/193||Totel iter: 670||size0 ssim loss:-0.7685; size1 ssim loss:-0.7472; size2 ssim loss:-0.7464; ||LR: 0.00069461||Batch time: 0.3929 sec.
+Epoch:4||epochiter: 101/193||Totel iter: 680||size0 ssim loss:-0.8105; size1 ssim loss:-0.7907; size2 ssim loss:-0.7910; ||LR: 0.00070496||Batch time: 0.3868 sec.
+Epoch:4||epochiter: 111/193||Totel iter: 690||size0 ssim loss:-0.7758; size1 ssim loss:-0.7593; size2 ssim loss:-0.7589; ||LR: 0.00071531||Batch time: 0.3509 sec.
+Epoch:4||epochiter: 121/193||Totel iter: 700||size0 ssim loss:-0.8009; size1 ssim loss:-0.7841; size2 ssim loss:-0.7836; ||LR: 0.00072566||Batch time: 0.3835 sec.
+Epoch:4||epochiter: 131/193||Totel iter: 710||size0 ssim loss:-0.7750; size1 ssim loss:-0.7530; size2 ssim loss:-0.7523; ||LR: 0.00073602||Batch time: 0.4052 sec.
+Epoch:4||epochiter: 141/193||Totel iter: 720||size0 ssim loss:-0.7669; size1 ssim loss:-0.7453; size2 ssim loss:-0.7449; ||LR: 0.00074637||Batch time: 0.3877 sec.
+Epoch:4||epochiter: 151/193||Totel iter: 730||size0 ssim loss:-0.8077; size1 ssim loss:-0.7877; size2 ssim loss:-0.7873; ||LR: 0.00075672||Batch time: 0.3661 sec.
+Epoch:4||epochiter: 161/193||Totel iter: 740||size0 ssim loss:-0.7885; size1 ssim loss:-0.7698; size2 ssim loss:-0.7700; ||LR: 0.00076707||Batch time: 0.3761 sec.
+Epoch:4||epochiter: 171/193||Totel iter: 750||size0 ssim loss:-0.7907; size1 ssim loss:-0.7767; size2 ssim loss:-0.7765; ||LR: 0.00077742||Batch time: 0.4152 sec.
+Epoch:4||epochiter: 181/193||Totel iter: 760||size0 ssim loss:-0.7896; size1 ssim loss:-0.7779; size2 ssim loss:-0.7783; ||LR: 0.00078778||Batch time: 0.3870 sec.
+Epoch:4||epochiter: 191/193||Totel iter: 770||size0 ssim loss:-0.8296; size1 ssim loss:-0.8165; size2 ssim loss:-0.8164; ||LR: 0.00079813||Batch time: 0.3932 sec.
+Epoch:5||epochiter: 8/193||Totel iter: 780||size0 ssim loss:-0.8348; size1 ssim loss:-0.8219; size2 ssim loss:-0.8224; ||LR: 0.00080848||Batch time: 0.4043 sec.
+Epoch:5||epochiter: 18/193||Totel iter: 790||size0 ssim loss:-0.7832; size1 ssim loss:-0.7664; size2 ssim loss:-0.7664; ||LR: 0.00081883||Batch time: 0.3752 sec.
+Epoch:5||epochiter: 28/193||Totel iter: 800||size0 ssim loss:-0.8181; size1 ssim loss:-0.8034; size2 ssim loss:-0.8038; ||LR: 0.00082919||Batch time: 0.3643 sec.
+Epoch:5||epochiter: 38/193||Totel iter: 810||size0 ssim loss:-0.8289; size1 ssim loss:-0.8146; size2 ssim loss:-0.8150; ||LR: 0.00083954||Batch time: 0.3847 sec.
+Epoch:5||epochiter: 48/193||Totel iter: 820||size0 ssim loss:-0.8053; size1 ssim loss:-0.7892; size2 ssim loss:-0.7891; ||LR: 0.00084989||Batch time: 0.3918 sec.
+Epoch:5||epochiter: 58/193||Totel iter: 830||size0 ssim loss:-0.8348; size1 ssim loss:-0.8177; size2 ssim loss:-0.8179; ||LR: 0.00086024||Batch time: 0.3947 sec.
+Epoch:5||epochiter: 68/193||Totel iter: 840||size0 ssim loss:-0.8330; size1 ssim loss:-0.8172; size2 ssim loss:-0.8170; ||LR: 0.00087060||Batch time: 0.3849 sec.
+Epoch:5||epochiter: 78/193||Totel iter: 850||size0 ssim loss:-0.8081; size1 ssim loss:-0.7924; size2 ssim loss:-0.7923; ||LR: 0.00088095||Batch time: 0.3825 sec.
+Epoch:5||epochiter: 88/193||Totel iter: 860||size0 ssim loss:-0.8050; size1 ssim loss:-0.7896; size2 ssim loss:-0.7898; ||LR: 0.00089130||Batch time: 0.3741 sec.
+Epoch:5||epochiter: 98/193||Totel iter: 870||size0 ssim loss:-0.7963; size1 ssim loss:-0.7804; size2 ssim loss:-0.7803; ||LR: 0.00090165||Batch time: 0.3738 sec.
+Epoch:5||epochiter: 108/193||Totel iter: 880||size0 ssim loss:-0.8273; size1 ssim loss:-0.8090; size2 ssim loss:-0.8085; ||LR: 0.00091201||Batch time: 0.3860 sec.
+Epoch:5||epochiter: 118/193||Totel iter: 890||size0 ssim loss:-0.8291; size1 ssim loss:-0.8161; size2 ssim loss:-0.8162; ||LR: 0.00092236||Batch time: 0.3829 sec.
+Epoch:5||epochiter: 128/193||Totel iter: 900||size0 ssim loss:-0.8017; size1 ssim loss:-0.7870; size2 ssim loss:-0.7866; ||LR: 0.00093271||Batch time: 0.3865 sec.
+Epoch:5||epochiter: 138/193||Totel iter: 910||size0 ssim loss:-0.8264; size1 ssim loss:-0.8109; size2 ssim loss:-0.8109; ||LR: 0.00094306||Batch time: 0.3833 sec.
+Epoch:5||epochiter: 148/193||Totel iter: 920||size0 ssim loss:-0.8359; size1 ssim loss:-0.8194; size2 ssim loss:-0.8196; ||LR: 0.00095341||Batch time: 0.3853 sec.
+Epoch:5||epochiter: 158/193||Totel iter: 930||size0 ssim loss:-0.8211; size1 ssim loss:-0.8059; size2 ssim loss:-0.8060; ||LR: 0.00096377||Batch time: 0.3784 sec.
+Epoch:5||epochiter: 168/193||Totel iter: 940||size0 ssim loss:-0.8033; size1 ssim loss:-0.7832; size2 ssim loss:-0.7834; ||LR: 0.00097412||Batch time: 0.3577 sec.
+Epoch:5||epochiter: 178/193||Totel iter: 950||size0 ssim loss:-0.8394; size1 ssim loss:-0.8261; size2 ssim loss:-0.8268; ||LR: 0.00098447||Batch time: 0.4132 sec.
+Epoch:5||epochiter: 188/193||Totel iter: 960||size0 ssim loss:-0.8503; size1 ssim loss:-0.8357; size2 ssim loss:-0.8361; ||LR: 0.00099482||Batch time: 0.3822 sec.
+Epoch:6||epochiter: 5/193||Totel iter: 970||size0 ssim loss:-0.8312; size1 ssim loss:-0.8185; size2 ssim loss:-0.8186; ||LR: 0.00100000||Batch time: 0.3939 sec.
+Epoch:6||epochiter: 15/193||Totel iter: 980||size0 ssim loss:-0.8272; size1 ssim loss:-0.8139; size2 ssim loss:-0.8139; ||LR: 0.00100000||Batch time: 0.3726 sec.
+Epoch:6||epochiter: 25/193||Totel iter: 990||size0 ssim loss:-0.8367; size1 ssim loss:-0.8216; size2 ssim loss:-0.8219; ||LR: 0.00100000||Batch time: 0.3959 sec.
+Epoch:6||epochiter: 35/193||Totel iter: 1000||size0 ssim loss:-0.8535; size1 ssim loss:-0.8422; size2 ssim loss:-0.8429; ||LR: 0.00100000||Batch time: 0.3884 sec.
+Epoch:6||epochiter: 45/193||Totel iter: 1010||size0 ssim loss:-0.8514; size1 ssim loss:-0.8376; size2 ssim loss:-0.8382; ||LR: 0.00100000||Batch time: 0.3940 sec.
+Epoch:6||epochiter: 55/193||Totel iter: 1020||size0 ssim loss:-0.8429; size1 ssim loss:-0.8287; size2 ssim loss:-0.8288; ||LR: 0.00100000||Batch time: 0.4072 sec.
+Epoch:6||epochiter: 65/193||Totel iter: 1030||size0 ssim loss:-0.8498; size1 ssim loss:-0.8343; size2 ssim loss:-0.8350; ||LR: 0.00100000||Batch time: 0.3959 sec.
+Epoch:6||epochiter: 75/193||Totel iter: 1040||size0 ssim loss:-0.8410; size1 ssim loss:-0.8282; size2 ssim loss:-0.8285; ||LR: 0.00100000||Batch time: 0.3858 sec.
+Epoch:6||epochiter: 85/193||Totel iter: 1050||size0 ssim loss:-0.8544; size1 ssim loss:-0.8425; size2 ssim loss:-0.8427; ||LR: 0.00100000||Batch time: 0.3906 sec.
+Epoch:6||epochiter: 95/193||Totel iter: 1060||size0 ssim loss:-0.8706; size1 ssim loss:-0.8587; size2 ssim loss:-0.8599; ||LR: 0.00100000||Batch time: 0.3975 sec.
+Epoch:6||epochiter: 105/193||Totel iter: 1070||size0 ssim loss:-0.8222; size1 ssim loss:-0.8103; size2 ssim loss:-0.8105; ||LR: 0.00100000||Batch time: 0.3824 sec.
+Epoch:6||epochiter: 115/193||Totel iter: 1080||size0 ssim loss:-0.8557; size1 ssim loss:-0.8432; size2 ssim loss:-0.8441; ||LR: 0.00100000||Batch time: 0.3865 sec.
+Epoch:6||epochiter: 125/193||Totel iter: 1090||size0 ssim loss:-0.8640; size1 ssim loss:-0.8491; size2 ssim loss:-0.8497; ||LR: 0.00100000||Batch time: 0.3838 sec.
+Epoch:6||epochiter: 135/193||Totel iter: 1100||size0 ssim loss:-0.8621; size1 ssim loss:-0.8496; size2 ssim loss:-0.8502; ||LR: 0.00100000||Batch time: 0.3856 sec.
+Epoch:6||epochiter: 145/193||Totel iter: 1110||size0 ssim loss:-0.8463; size1 ssim loss:-0.8333; size2 ssim loss:-0.8339; ||LR: 0.00100000||Batch time: 0.3700 sec.
+Epoch:6||epochiter: 155/193||Totel iter: 1120||size0 ssim loss:-0.8685; size1 ssim loss:-0.8548; size2 ssim loss:-0.8550; ||LR: 0.00100000||Batch time: 0.3777 sec.
+Epoch:6||epochiter: 165/193||Totel iter: 1130||size0 ssim loss:-0.8581; size1 ssim loss:-0.8465; size2 ssim loss:-0.8470; ||LR: 0.00100000||Batch time: 0.3970 sec.
+Epoch:6||epochiter: 175/193||Totel iter: 1140||size0 ssim loss:-0.8694; size1 ssim loss:-0.8558; size2 ssim loss:-0.8563; ||LR: 0.00100000||Batch time: 0.3845 sec.
+Epoch:6||epochiter: 185/193||Totel iter: 1150||size0 ssim loss:-0.8586; size1 ssim loss:-0.8435; size2 ssim loss:-0.8437; ||LR: 0.00100000||Batch time: 0.3733 sec.
+Epoch:7||epochiter: 2/193||Totel iter: 1160||size0 ssim loss:-0.8671; size1 ssim loss:-0.8557; size2 ssim loss:-0.8564; ||LR: 0.00100000||Batch time: 0.3848 sec.
+Epoch:7||epochiter: 12/193||Totel iter: 1170||size0 ssim loss:-0.8704; size1 ssim loss:-0.8582; size2 ssim loss:-0.8588; ||LR: 0.00100000||Batch time: 0.3823 sec.
+Epoch:7||epochiter: 22/193||Totel iter: 1180||size0 ssim loss:-0.8777; size1 ssim loss:-0.8683; size2 ssim loss:-0.8691; ||LR: 0.00100000||Batch time: 0.4029 sec.
+Epoch:7||epochiter: 32/193||Totel iter: 1190||size0 ssim loss:-0.8718; size1 ssim loss:-0.8616; size2 ssim loss:-0.8624; ||LR: 0.00100000||Batch time: 0.3961 sec.
+Epoch:7||epochiter: 42/193||Totel iter: 1200||size0 ssim loss:-0.8539; size1 ssim loss:-0.8407; size2 ssim loss:-0.8414; ||LR: 0.00100000||Batch time: 0.3842 sec.
+Epoch:7||epochiter: 52/193||Totel iter: 1210||size0 ssim loss:-0.8593; size1 ssim loss:-0.8485; size2 ssim loss:-0.8496; ||LR: 0.00100000||Batch time: 0.4093 sec.
+Epoch:7||epochiter: 62/193||Totel iter: 1220||size0 ssim loss:-0.8508; size1 ssim loss:-0.8384; size2 ssim loss:-0.8387; ||LR: 0.00100000||Batch time: 0.3901 sec.
+Epoch:7||epochiter: 72/193||Totel iter: 1230||size0 ssim loss:-0.8729; size1 ssim loss:-0.8613; size2 ssim loss:-0.8619; ||LR: 0.00100000||Batch time: 0.3846 sec.
+Epoch:7||epochiter: 82/193||Totel iter: 1240||size0 ssim loss:-0.8630; size1 ssim loss:-0.8515; size2 ssim loss:-0.8523; ||LR: 0.00100000||Batch time: 0.3874 sec.
+Epoch:7||epochiter: 92/193||Totel iter: 1250||size0 ssim loss:-0.8602; size1 ssim loss:-0.8489; size2 ssim loss:-0.8496; ||LR: 0.00100000||Batch time: 0.3963 sec.
+Epoch:7||epochiter: 102/193||Totel iter: 1260||size0 ssim loss:-0.8894; size1 ssim loss:-0.8787; size2 ssim loss:-0.8795; ||LR: 0.00100000||Batch time: 0.4118 sec.
+Epoch:7||epochiter: 112/193||Totel iter: 1270||size0 ssim loss:-0.8528; size1 ssim loss:-0.8434; size2 ssim loss:-0.8448; ||LR: 0.00100000||Batch time: 0.3937 sec.
+Epoch:7||epochiter: 122/193||Totel iter: 1280||size0 ssim loss:-0.8607; size1 ssim loss:-0.8481; size2 ssim loss:-0.8487; ||LR: 0.00100000||Batch time: 0.3733 sec.
+Epoch:7||epochiter: 132/193||Totel iter: 1290||size0 ssim loss:-0.8974; size1 ssim loss:-0.8878; size2 ssim loss:-0.8888; ||LR: 0.00100000||Batch time: 0.3913 sec.
+Epoch:7||epochiter: 142/193||Totel iter: 1300||size0 ssim loss:-0.8893; size1 ssim loss:-0.8799; size2 ssim loss:-0.8814; ||LR: 0.00100000||Batch time: 0.3848 sec.
+Epoch:7||epochiter: 152/193||Totel iter: 1310||size0 ssim loss:-0.8873; size1 ssim loss:-0.8748; size2 ssim loss:-0.8755; ||LR: 0.00100000||Batch time: 0.3983 sec.
+Epoch:7||epochiter: 162/193||Totel iter: 1320||size0 ssim loss:-0.8954; size1 ssim loss:-0.8825; size2 ssim loss:-0.8835; ||LR: 0.00100000||Batch time: 0.3817 sec.
+Epoch:7||epochiter: 172/193||Totel iter: 1330||size0 ssim loss:-0.8935; size1 ssim loss:-0.8830; size2 ssim loss:-0.8839; ||LR: 0.00100000||Batch time: 0.3892 sec.
+Epoch:7||epochiter: 182/193||Totel iter: 1340||size0 ssim loss:-0.9067; size1 ssim loss:-0.8976; size2 ssim loss:-0.8986; ||LR: 0.00100000||Batch time: 0.3740 sec.
+Epoch:7||epochiter: 192/193||Totel iter: 1350||size0 ssim loss:-0.8946; size1 ssim loss:-0.8845; size2 ssim loss:-0.8854; ||LR: 0.00100000||Batch time: 0.3903 sec.
+Epoch:8||epochiter: 9/193||Totel iter: 1360||size0 ssim loss:-0.8948; size1 ssim loss:-0.8852; size2 ssim loss:-0.8863; ||LR: 0.00100000||Batch time: 0.3878 sec.
+Epoch:8||epochiter: 19/193||Totel iter: 1370||size0 ssim loss:-0.8994; size1 ssim loss:-0.8871; size2 ssim loss:-0.8878; ||LR: 0.00100000||Batch time: 0.3992 sec.
+Epoch:8||epochiter: 29/193||Totel iter: 1380||size0 ssim loss:-0.9008; size1 ssim loss:-0.8910; size2 ssim loss:-0.8918; ||LR: 0.00100000||Batch time: 0.3955 sec.
+Epoch:8||epochiter: 39/193||Totel iter: 1390||size0 ssim loss:-0.8979; size1 ssim loss:-0.8880; size2 ssim loss:-0.8890; ||LR: 0.00100000||Batch time: 0.3788 sec.
+Epoch:8||epochiter: 49/193||Totel iter: 1400||size0 ssim loss:-0.8776; size1 ssim loss:-0.8669; size2 ssim loss:-0.8673; ||LR: 0.00100000||Batch time: 0.3918 sec.
+Epoch:8||epochiter: 59/193||Totel iter: 1410||size0 ssim loss:-0.8782; size1 ssim loss:-0.8644; size2 ssim loss:-0.8651; ||LR: 0.00100000||Batch time: 0.3969 sec.
+Epoch:8||epochiter: 69/193||Totel iter: 1420||size0 ssim loss:-0.8955; size1 ssim loss:-0.8842; size2 ssim loss:-0.8852; ||LR: 0.00100000||Batch time: 0.3713 sec.
+Epoch:8||epochiter: 79/193||Totel iter: 1430||size0 ssim loss:-0.9028; size1 ssim loss:-0.8924; size2 ssim loss:-0.8931; ||LR: 0.00100000||Batch time: 0.3850 sec.
+Epoch:8||epochiter: 89/193||Totel iter: 1440||size0 ssim loss:-0.8961; size1 ssim loss:-0.8852; size2 ssim loss:-0.8857; ||LR: 0.00100000||Batch time: 0.3840 sec.
+Epoch:8||epochiter: 99/193||Totel iter: 1450||size0 ssim loss:-0.5842; size1 ssim loss:-0.5138; size2 ssim loss:-0.5049; ||LR: 0.00100000||Batch time: 0.3940 sec.
+Epoch:8||epochiter: 109/193||Totel iter: 1460||size0 ssim loss:-0.8285; size1 ssim loss:-0.7995; size2 ssim loss:-0.7983; ||LR: 0.00100000||Batch time: 0.3916 sec.
+Epoch:8||epochiter: 119/193||Totel iter: 1470||size0 ssim loss:-0.8741; size1 ssim loss:-0.8539; size2 ssim loss:-0.8534; ||LR: 0.00100000||Batch time: 0.3978 sec.
+Epoch:8||epochiter: 129/193||Totel iter: 1480||size0 ssim loss:-0.8972; size1 ssim loss:-0.8827; size2 ssim loss:-0.8834; ||LR: 0.00100000||Batch time: 0.3826 sec.
+Epoch:8||epochiter: 139/193||Totel iter: 1490||size0 ssim loss:-0.8932; size1 ssim loss:-0.8806; size2 ssim loss:-0.8814; ||LR: 0.00100000||Batch time: 0.3775 sec.
+Epoch:8||epochiter: 149/193||Totel iter: 1500||size0 ssim loss:-0.8991; size1 ssim loss:-0.8896; size2 ssim loss:-0.8905; ||LR: 0.00100000||Batch time: 0.3918 sec.
+Epoch:8||epochiter: 159/193||Totel iter: 1510||size0 ssim loss:-0.8921; size1 ssim loss:-0.8805; size2 ssim loss:-0.8810; ||LR: 0.00100000||Batch time: 0.3872 sec.
+Epoch:8||epochiter: 169/193||Totel iter: 1520||size0 ssim loss:-0.9123; size1 ssim loss:-0.9025; size2 ssim loss:-0.9035; ||LR: 0.00100000||Batch time: 0.3843 sec.
+Epoch:8||epochiter: 179/193||Totel iter: 1530||size0 ssim loss:-0.9049; size1 ssim loss:-0.8948; size2 ssim loss:-0.8957; ||LR: 0.00100000||Batch time: 0.3901 sec.
+Epoch:8||epochiter: 189/193||Totel iter: 1540||size0 ssim loss:-0.9113; size1 ssim loss:-0.9007; size2 ssim loss:-0.9017; ||LR: 0.00100000||Batch time: 0.3874 sec.
+Epoch:9||epochiter: 6/193||Totel iter: 1550||size0 ssim loss:-0.9029; size1 ssim loss:-0.8927; size2 ssim loss:-0.8940; ||LR: 0.00100000||Batch time: 0.3937 sec.
+Epoch:9||epochiter: 16/193||Totel iter: 1560||size0 ssim loss:-0.9108; size1 ssim loss:-0.9006; size2 ssim loss:-0.9016; ||LR: 0.00100000||Batch time: 0.3993 sec.
+Epoch:9||epochiter: 26/193||Totel iter: 1570||size0 ssim loss:-0.9043; size1 ssim loss:-0.8933; size2 ssim loss:-0.8942; ||LR: 0.00100000||Batch time: 0.3922 sec.
+Epoch:9||epochiter: 36/193||Totel iter: 1580||size0 ssim loss:-0.9257; size1 ssim loss:-0.9162; size2 ssim loss:-0.9167; ||LR: 0.00100000||Batch time: 0.4048 sec.
+Epoch:9||epochiter: 46/193||Totel iter: 1590||size0 ssim loss:-0.9175; size1 ssim loss:-0.9085; size2 ssim loss:-0.9100; ||LR: 0.00100000||Batch time: 0.3953 sec.
+Epoch:9||epochiter: 56/193||Totel iter: 1600||size0 ssim loss:-0.9030; size1 ssim loss:-0.8939; size2 ssim loss:-0.8946; ||LR: 0.00100000||Batch time: 0.3960 sec.
+Epoch:9||epochiter: 66/193||Totel iter: 1610||size0 ssim loss:-0.9073; size1 ssim loss:-0.8968; size2 ssim loss:-0.8978; ||LR: 0.00100000||Batch time: 0.4037 sec.
+Epoch:9||epochiter: 76/193||Totel iter: 1620||size0 ssim loss:-0.9080; size1 ssim loss:-0.8976; size2 ssim loss:-0.8988; ||LR: 0.00100000||Batch time: 0.3914 sec.
+Epoch:9||epochiter: 86/193||Totel iter: 1630||size0 ssim loss:-0.9118; size1 ssim loss:-0.9005; size2 ssim loss:-0.9013; ||LR: 0.00100000||Batch time: 0.3957 sec.
+Epoch:9||epochiter: 96/193||Totel iter: 1640||size0 ssim loss:-0.9119; size1 ssim loss:-0.9038; size2 ssim loss:-0.9054; ||LR: 0.00100000||Batch time: 0.3698 sec.
+Epoch:9||epochiter: 106/193||Totel iter: 1650||size0 ssim loss:-0.9184; size1 ssim loss:-0.9068; size2 ssim loss:-0.9073; ||LR: 0.00100000||Batch time: 0.3784 sec.
+Epoch:9||epochiter: 116/193||Totel iter: 1660||size0 ssim loss:-0.9250; size1 ssim loss:-0.9160; size2 ssim loss:-0.9168; ||LR: 0.00100000||Batch time: 0.3844 sec.
+Epoch:9||epochiter: 126/193||Totel iter: 1670||size0 ssim loss:-0.9148; size1 ssim loss:-0.9048; size2 ssim loss:-0.9060; ||LR: 0.00100000||Batch time: 0.3746 sec.
+Epoch:9||epochiter: 136/193||Totel iter: 1680||size0 ssim loss:-0.9280; size1 ssim loss:-0.9213; size2 ssim loss:-0.9228; ||LR: 0.00100000||Batch time: 0.3891 sec.
+Epoch:9||epochiter: 146/193||Totel iter: 1690||size0 ssim loss:-0.9102; size1 ssim loss:-0.8993; size2 ssim loss:-0.9002; ||LR: 0.00100000||Batch time: 0.3882 sec.
+Epoch:9||epochiter: 156/193||Totel iter: 1700||size0 ssim loss:-0.9011; size1 ssim loss:-0.8892; size2 ssim loss:-0.8900; ||LR: 0.00100000||Batch time: 0.3825 sec.
+Epoch:9||epochiter: 166/193||Totel iter: 1710||size0 ssim loss:-0.9223; size1 ssim loss:-0.9131; size2 ssim loss:-0.9143; ||LR: 0.00100000||Batch time: 0.3851 sec.
+Epoch:9||epochiter: 176/193||Totel iter: 1720||size0 ssim loss:-0.9120; size1 ssim loss:-0.9023; size2 ssim loss:-0.9041; ||LR: 0.00100000||Batch time: 0.3868 sec.
+Epoch:9||epochiter: 186/193||Totel iter: 1730||size0 ssim loss:-0.9226; size1 ssim loss:-0.9146; size2 ssim loss:-0.9160; ||LR: 0.00100000||Batch time: 0.3908 sec.
+Epoch:10||epochiter: 3/193||Totel iter: 1740||size0 ssim loss:-0.9229; size1 ssim loss:-0.9121; size2 ssim loss:-0.9129; ||LR: 0.00100000||Batch time: 0.3853 sec.
+Epoch:10||epochiter: 13/193||Totel iter: 1750||size0 ssim loss:-0.9190; size1 ssim loss:-0.9097; size2 ssim loss:-0.9111; ||LR: 0.00100000||Batch time: 0.3820 sec.
+Epoch:10||epochiter: 23/193||Totel iter: 1760||size0 ssim loss:-0.9220; size1 ssim loss:-0.9120; size2 ssim loss:-0.9130; ||LR: 0.00100000||Batch time: 0.3560 sec.
+Epoch:10||epochiter: 33/193||Totel iter: 1770||size0 ssim loss:-0.9232; size1 ssim loss:-0.9142; size2 ssim loss:-0.9154; ||LR: 0.00100000||Batch time: 0.3871 sec.
+Epoch:10||epochiter: 43/193||Totel iter: 1780||size0 ssim loss:-0.9273; size1 ssim loss:-0.9193; size2 ssim loss:-0.9205; ||LR: 0.00100000||Batch time: 0.3976 sec.
+Epoch:10||epochiter: 53/193||Totel iter: 1790||size0 ssim loss:-0.9245; size1 ssim loss:-0.9169; size2 ssim loss:-0.9182; ||LR: 0.00100000||Batch time: 0.3982 sec.
+Epoch:10||epochiter: 63/193||Totel iter: 1800||size0 ssim loss:-0.9164; size1 ssim loss:-0.9064; size2 ssim loss:-0.9071; ||LR: 0.00100000||Batch time: 0.3945 sec.
+Epoch:10||epochiter: 73/193||Totel iter: 1810||size0 ssim loss:-0.9302; size1 ssim loss:-0.9227; size2 ssim loss:-0.9237; ||LR: 0.00100000||Batch time: 0.3533 sec.
+Epoch:10||epochiter: 83/193||Totel iter: 1820||size0 ssim loss:-0.8644; size1 ssim loss:-0.8514; size2 ssim loss:-0.8518; ||LR: 0.00100000||Batch time: 0.3824 sec.
+Epoch:10||epochiter: 93/193||Totel iter: 1830||size0 ssim loss:-0.9066; size1 ssim loss:-0.8944; size2 ssim loss:-0.8951; ||LR: 0.00100000||Batch time: 0.3734 sec.
+Epoch:10||epochiter: 103/193||Totel iter: 1840||size0 ssim loss:-0.9175; size1 ssim loss:-0.9091; size2 ssim loss:-0.9105; ||LR: 0.00100000||Batch time: 0.3843 sec.
+Epoch:10||epochiter: 113/193||Totel iter: 1850||size0 ssim loss:-0.9264; size1 ssim loss:-0.9178; size2 ssim loss:-0.9192; ||LR: 0.00100000||Batch time: 0.3787 sec.
+Epoch:10||epochiter: 123/193||Totel iter: 1860||size0 ssim loss:-0.9110; size1 ssim loss:-0.9017; size2 ssim loss:-0.9028; ||LR: 0.00100000||Batch time: 0.3897 sec.
+Epoch:10||epochiter: 133/193||Totel iter: 1870||size0 ssim loss:-0.9273; size1 ssim loss:-0.9198; size2 ssim loss:-0.9211; ||LR: 0.00100000||Batch time: 0.4146 sec.
+Epoch:10||epochiter: 143/193||Totel iter: 1880||size0 ssim loss:-0.9249; size1 ssim loss:-0.9175; size2 ssim loss:-0.9188; ||LR: 0.00100000||Batch time: 0.3884 sec.
+Epoch:10||epochiter: 153/193||Totel iter: 1890||size0 ssim loss:-0.9128; size1 ssim loss:-0.9030; size2 ssim loss:-0.9042; ||LR: 0.00100000||Batch time: 0.3850 sec.
+Epoch:10||epochiter: 163/193||Totel iter: 1900||size0 ssim loss:-0.9341; size1 ssim loss:-0.9272; size2 ssim loss:-0.9287; ||LR: 0.00100000||Batch time: 0.3972 sec.
+Epoch:10||epochiter: 173/193||Totel iter: 1910||size0 ssim loss:-0.9307; size1 ssim loss:-0.9243; size2 ssim loss:-0.9258; ||LR: 0.00100000||Batch time: 0.3872 sec.
+Epoch:10||epochiter: 183/193||Totel iter: 1920||size0 ssim loss:-0.9195; size1 ssim loss:-0.9122; size2 ssim loss:-0.9138; ||LR: 0.00100000||Batch time: 0.3550 sec.
+Epoch:11||epochiter: 0/193||Totel iter: 1930||size0 ssim loss:-0.9337; size1 ssim loss:-0.9261; size2 ssim loss:-0.9274; ||LR: 0.00100000||Batch time: 0.3940 sec.
+Epoch:11||epochiter: 10/193||Totel iter: 1940||size0 ssim loss:-0.9123; size1 ssim loss:-0.9045; size2 ssim loss:-0.9058; ||LR: 0.00100000||Batch time: 0.3921 sec.
+Epoch:11||epochiter: 20/193||Totel iter: 1950||size0 ssim loss:-0.9319; size1 ssim loss:-0.9254; size2 ssim loss:-0.9270; ||LR: 0.00100000||Batch time: 0.3871 sec.
+Epoch:11||epochiter: 30/193||Totel iter: 1960||size0 ssim loss:-0.9172; size1 ssim loss:-0.9088; size2 ssim loss:-0.9104; ||LR: 0.00100000||Batch time: 0.3805 sec.

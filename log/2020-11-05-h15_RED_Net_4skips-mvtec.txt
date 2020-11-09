@@ -1,0 +1,245 @@
+model:
+    name: RED_Net_4skips
+    type: Encoder
+    code_dim: 256
+    img_channel: 3
+    fp16: False
+op:
+    loss: SSIM_loss
+    window_size: 11
+    start_epoch: 0
+    max_epoch: 200
+    snapshot: 10
+    learning_rate: 0.004
+    decay_rate: 10
+    epoch_steps: [150, 200]
+db:
+    name: mvtec
+    data_dir: /home/xiongpan/dataset/defect_detect/train
+    loader_threads: 0
+    train_split: train
+    use_validation_set: False
+    validation_split: validation
+    val_split: test
+    resize: [256, 256]
+    batch_size: 128
+system:
+    resume: False
+    resume_path: 
+    finetune: False
+    finetune_path: 
+    save_dir: ./weights/
+loss:
+Epoch:1||epochiter: 0/193||Totel iter: 0||ssim loss:-0.0549;||LR: 0.00000100||Batch time: 2.4022 sec.
+Epoch:1||epochiter: 10/193||Totel iter: 10||ssim loss:-0.2346;||LR: 0.00004244||Batch time: 0.7521 sec.
+Epoch:1||epochiter: 20/193||Totel iter: 20||ssim loss:-0.4809;||LR: 0.00008388||Batch time: 0.7733 sec.
+Epoch:1||epochiter: 30/193||Totel iter: 30||ssim loss:-0.5315;||LR: 0.00012532||Batch time: 0.7762 sec.
+Epoch:1||epochiter: 40/193||Totel iter: 40||ssim loss:-0.5623;||LR: 0.00016676||Batch time: 0.7344 sec.
+Epoch:1||epochiter: 50/193||Totel iter: 50||ssim loss:-0.5681;||LR: 0.00020820||Batch time: 0.7479 sec.
+Epoch:1||epochiter: 60/193||Totel iter: 60||ssim loss:-0.5997;||LR: 0.00024964||Batch time: 0.7614 sec.
+Epoch:1||epochiter: 70/193||Totel iter: 70||ssim loss:-0.6160;||LR: 0.00029108||Batch time: 0.7678 sec.
+Epoch:1||epochiter: 80/193||Totel iter: 80||ssim loss:-0.6189;||LR: 0.00033252||Batch time: 0.7779 sec.
+Epoch:1||epochiter: 90/193||Totel iter: 90||ssim loss:-0.6248;||LR: 0.00037396||Batch time: 0.7657 sec.
+Epoch:1||epochiter: 100/193||Totel iter: 100||ssim loss:-0.6434;||LR: 0.00041540||Batch time: 0.7613 sec.
+Epoch:1||epochiter: 110/193||Totel iter: 110||ssim loss:-0.6132;||LR: 0.00045684||Batch time: 0.7548 sec.
+Epoch:1||epochiter: 120/193||Totel iter: 120||ssim loss:-0.6751;||LR: 0.00049828||Batch time: 0.7771 sec.
+Epoch:1||epochiter: 130/193||Totel iter: 130||ssim loss:-0.6548;||LR: 0.00053973||Batch time: 0.7463 sec.
+Epoch:1||epochiter: 140/193||Totel iter: 140||ssim loss:-0.6659;||LR: 0.00058117||Batch time: 0.7802 sec.
+Epoch:1||epochiter: 150/193||Totel iter: 150||ssim loss:-0.6640;||LR: 0.00062261||Batch time: 0.7714 sec.
+Epoch:1||epochiter: 160/193||Totel iter: 160||ssim loss:-0.6795;||LR: 0.00066405||Batch time: 0.7711 sec.
+Epoch:1||epochiter: 170/193||Totel iter: 170||ssim loss:-0.6482;||LR: 0.00070549||Batch time: 0.7618 sec.
+Epoch:1||epochiter: 180/193||Totel iter: 180||ssim loss:-0.6856;||LR: 0.00074693||Batch time: 0.7697 sec.
+Epoch:1||epochiter: 190/193||Totel iter: 190||ssim loss:-0.7000;||LR: 0.00078837||Batch time: 0.7703 sec.
+Epoch:2||epochiter: 7/193||Totel iter: 200||ssim loss:-0.6797;||LR: 0.00082981||Batch time: 0.7873 sec.
+Epoch:2||epochiter: 17/193||Totel iter: 210||ssim loss:-0.7041;||LR: 0.00087125||Batch time: 0.7733 sec.
+Epoch:2||epochiter: 27/193||Totel iter: 220||ssim loss:-0.6670;||LR: 0.00091269||Batch time: 0.7880 sec.
+Epoch:2||epochiter: 37/193||Totel iter: 230||ssim loss:-0.6966;||LR: 0.00095413||Batch time: 0.7628 sec.
+Epoch:2||epochiter: 47/193||Totel iter: 240||ssim loss:-0.7112;||LR: 0.00099557||Batch time: 0.7748 sec.
+Epoch:2||epochiter: 57/193||Totel iter: 250||ssim loss:-0.7292;||LR: 0.00103701||Batch time: 0.7685 sec.
+Epoch:2||epochiter: 67/193||Totel iter: 260||ssim loss:-0.7084;||LR: 0.00107845||Batch time: 0.7844 sec.
+Epoch:2||epochiter: 77/193||Totel iter: 270||ssim loss:-0.7370;||LR: 0.00111989||Batch time: 0.7673 sec.
+Epoch:2||epochiter: 87/193||Totel iter: 280||ssim loss:-0.7495;||LR: 0.00116133||Batch time: 0.7720 sec.
+Epoch:2||epochiter: 97/193||Totel iter: 290||ssim loss:-0.7457;||LR: 0.00120277||Batch time: 0.7378 sec.
+Epoch:2||epochiter: 107/193||Totel iter: 300||ssim loss:-0.7479;||LR: 0.00124421||Batch time: 0.7651 sec.
+Epoch:2||epochiter: 117/193||Totel iter: 310||ssim loss:-0.7451;||LR: 0.00128565||Batch time: 0.7771 sec.
+Epoch:2||epochiter: 127/193||Totel iter: 320||ssim loss:-0.8050;||LR: 0.00132709||Batch time: 0.7911 sec.
+Epoch:2||epochiter: 137/193||Totel iter: 330||ssim loss:-0.7976;||LR: 0.00136853||Batch time: 0.7820 sec.
+Epoch:2||epochiter: 147/193||Totel iter: 340||ssim loss:-0.8275;||LR: 0.00140997||Batch time: 0.7676 sec.
+Epoch:2||epochiter: 157/193||Totel iter: 350||ssim loss:-0.7897;||LR: 0.00145141||Batch time: 0.7646 sec.
+Epoch:2||epochiter: 167/193||Totel iter: 360||ssim loss:-0.8192;||LR: 0.00149285||Batch time: 0.7738 sec.
+Epoch:2||epochiter: 177/193||Totel iter: 370||ssim loss:-0.8374;||LR: 0.00153430||Batch time: 0.7725 sec.
+Epoch:2||epochiter: 187/193||Totel iter: 380||ssim loss:-0.8198;||LR: 0.00157574||Batch time: 0.7699 sec.
+Epoch:3||epochiter: 4/193||Totel iter: 390||ssim loss:-0.8484;||LR: 0.00161718||Batch time: 0.7532 sec.
+Epoch:3||epochiter: 14/193||Totel iter: 400||ssim loss:-0.8263;||LR: 0.00165862||Batch time: 0.7669 sec.
+Epoch:3||epochiter: 24/193||Totel iter: 410||ssim loss:-0.8429;||LR: 0.00170006||Batch time: 0.7606 sec.
+Epoch:3||epochiter: 34/193||Totel iter: 420||ssim loss:-0.8784;||LR: 0.00174150||Batch time: 0.7718 sec.
+Epoch:3||epochiter: 44/193||Totel iter: 430||ssim loss:-0.8345;||LR: 0.00178294||Batch time: 0.7324 sec.
+Epoch:3||epochiter: 54/193||Totel iter: 440||ssim loss:-0.8608;||LR: 0.00182438||Batch time: 0.7676 sec.
+Epoch:3||epochiter: 64/193||Totel iter: 450||ssim loss:-0.8916;||LR: 0.00186582||Batch time: 0.7667 sec.
+Epoch:3||epochiter: 74/193||Totel iter: 460||ssim loss:-0.8450;||LR: 0.00190726||Batch time: 0.7632 sec.
+Epoch:3||epochiter: 84/193||Totel iter: 470||ssim loss:-0.8149;||LR: 0.00194870||Batch time: 0.7742 sec.
+Epoch:3||epochiter: 94/193||Totel iter: 480||ssim loss:-0.8849;||LR: 0.00199014||Batch time: 0.7670 sec.
+Epoch:3||epochiter: 104/193||Totel iter: 490||ssim loss:-0.8776;||LR: 0.00203158||Batch time: 0.7733 sec.
+Epoch:3||epochiter: 114/193||Totel iter: 500||ssim loss:-0.8743;||LR: 0.00207302||Batch time: 0.7771 sec.
+Epoch:3||epochiter: 124/193||Totel iter: 510||ssim loss:-0.8923;||LR: 0.00211446||Batch time: 0.7650 sec.
+Epoch:3||epochiter: 134/193||Totel iter: 520||ssim loss:-0.8990;||LR: 0.00215590||Batch time: 0.7698 sec.
+Epoch:3||epochiter: 144/193||Totel iter: 530||ssim loss:-0.8677;||LR: 0.00219734||Batch time: 0.7751 sec.
+Epoch:3||epochiter: 154/193||Totel iter: 540||ssim loss:-0.8892;||LR: 0.00223878||Batch time: 0.7687 sec.
+Epoch:3||epochiter: 164/193||Totel iter: 550||ssim loss:-0.8919;||LR: 0.00228022||Batch time: 0.7708 sec.
+Epoch:3||epochiter: 174/193||Totel iter: 560||ssim loss:-0.8882;||LR: 0.00232166||Batch time: 0.7667 sec.
+Epoch:3||epochiter: 184/193||Totel iter: 570||ssim loss:-0.9008;||LR: 0.00236310||Batch time: 0.7678 sec.
+Epoch:4||epochiter: 1/193||Totel iter: 580||ssim loss:-0.8875;||LR: 0.00240454||Batch time: 0.7318 sec.
+Epoch:4||epochiter: 11/193||Totel iter: 590||ssim loss:-0.9146;||LR: 0.00244598||Batch time: 0.7337 sec.
+Epoch:4||epochiter: 21/193||Totel iter: 600||ssim loss:-0.8629;||LR: 0.00248742||Batch time: 0.7692 sec.
+Epoch:4||epochiter: 31/193||Totel iter: 610||ssim loss:-0.9100;||LR: 0.00252887||Batch time: 0.7486 sec.
+Epoch:4||epochiter: 41/193||Totel iter: 620||ssim loss:-0.8840;||LR: 0.00257031||Batch time: 0.7944 sec.
+Epoch:4||epochiter: 51/193||Totel iter: 630||ssim loss:-0.9002;||LR: 0.00261175||Batch time: 0.7803 sec.
+Epoch:4||epochiter: 61/193||Totel iter: 640||ssim loss:-0.9226;||LR: 0.00265319||Batch time: 0.7340 sec.
+Epoch:4||epochiter: 71/193||Totel iter: 650||ssim loss:-0.9129;||LR: 0.00269463||Batch time: 0.7595 sec.
+Epoch:4||epochiter: 81/193||Totel iter: 660||ssim loss:-0.9109;||LR: 0.00273607||Batch time: 0.7742 sec.
+Epoch:4||epochiter: 91/193||Totel iter: 670||ssim loss:-0.9231;||LR: 0.00277751||Batch time: 0.7840 sec.
+Epoch:4||epochiter: 101/193||Totel iter: 680||ssim loss:-0.9250;||LR: 0.00281895||Batch time: 0.7839 sec.
+Epoch:4||epochiter: 111/193||Totel iter: 690||ssim loss:-0.9157;||LR: 0.00286039||Batch time: 0.7744 sec.
+Epoch:4||epochiter: 121/193||Totel iter: 700||ssim loss:-0.9166;||LR: 0.00290183||Batch time: 0.7747 sec.
+Epoch:4||epochiter: 131/193||Totel iter: 710||ssim loss:-0.9410;||LR: 0.00294327||Batch time: 0.7639 sec.
+Epoch:4||epochiter: 141/193||Totel iter: 720||ssim loss:-0.9270;||LR: 0.00298471||Batch time: 0.7713 sec.
+Epoch:4||epochiter: 151/193||Totel iter: 730||ssim loss:-0.9179;||LR: 0.00302615||Batch time: 0.7638 sec.
+Epoch:4||epochiter: 161/193||Totel iter: 740||ssim loss:-0.9440;||LR: 0.00306759||Batch time: 0.8062 sec.
+Epoch:4||epochiter: 171/193||Totel iter: 750||ssim loss:-0.9393;||LR: 0.00310903||Batch time: 0.7573 sec.
+Epoch:4||epochiter: 181/193||Totel iter: 760||ssim loss:-0.9308;||LR: 0.00315047||Batch time: 0.7741 sec.
+Epoch:4||epochiter: 191/193||Totel iter: 770||ssim loss:-0.9456;||LR: 0.00319191||Batch time: 0.7729 sec.
+Epoch:5||epochiter: 8/193||Totel iter: 780||ssim loss:-0.9512;||LR: 0.00323335||Batch time: 0.7885 sec.
+Epoch:5||epochiter: 18/193||Totel iter: 790||ssim loss:-0.9480;||LR: 0.00327479||Batch time: 0.7604 sec.
+Epoch:5||epochiter: 28/193||Totel iter: 800||ssim loss:-0.9495;||LR: 0.00331623||Batch time: 0.7709 sec.
+Epoch:5||epochiter: 38/193||Totel iter: 810||ssim loss:-0.9538;||LR: 0.00335767||Batch time: 0.8012 sec.
+Epoch:5||epochiter: 48/193||Totel iter: 820||ssim loss:-0.9511;||LR: 0.00339911||Batch time: 0.7714 sec.
+Epoch:5||epochiter: 58/193||Totel iter: 830||ssim loss:-0.9448;||LR: 0.00344055||Batch time: 0.7596 sec.
+Epoch:5||epochiter: 68/193||Totel iter: 840||ssim loss:-0.9371;||LR: 0.00348199||Batch time: 0.7471 sec.
+Epoch:5||epochiter: 78/193||Totel iter: 850||ssim loss:-0.9467;||LR: 0.00352344||Batch time: 0.7940 sec.
+Epoch:5||epochiter: 88/193||Totel iter: 860||ssim loss:-0.9463;||LR: 0.00356488||Batch time: 0.7980 sec.
+Epoch:5||epochiter: 98/193||Totel iter: 870||ssim loss:-0.9597;||LR: 0.00360632||Batch time: 0.7638 sec.
+Epoch:5||epochiter: 108/193||Totel iter: 880||ssim loss:-0.9531;||LR: 0.00364776||Batch time: 0.7649 sec.
+Epoch:5||epochiter: 118/193||Totel iter: 890||ssim loss:-0.9556;||LR: 0.00368920||Batch time: 0.7424 sec.
+Epoch:5||epochiter: 128/193||Totel iter: 900||ssim loss:-0.9387;||LR: 0.00373064||Batch time: 0.7444 sec.
+Epoch:5||epochiter: 138/193||Totel iter: 910||ssim loss:-0.9607;||LR: 0.00377208||Batch time: 0.7882 sec.
+Epoch:5||epochiter: 148/193||Totel iter: 920||ssim loss:-0.9595;||LR: 0.00381352||Batch time: 0.7802 sec.
+Epoch:5||epochiter: 158/193||Totel iter: 930||ssim loss:-0.9633;||LR: 0.00385496||Batch time: 0.7591 sec.
+Epoch:5||epochiter: 168/193||Totel iter: 940||ssim loss:-0.9671;||LR: 0.00389640||Batch time: 0.7729 sec.
+Epoch:5||epochiter: 178/193||Totel iter: 950||ssim loss:-0.9566;||LR: 0.00393784||Batch time: 0.7671 sec.
+Epoch:5||epochiter: 188/193||Totel iter: 960||ssim loss:-0.9591;||LR: 0.00397928||Batch time: 0.7619 sec.
+Epoch:6||epochiter: 5/193||Totel iter: 970||ssim loss:-0.9543;||LR: 0.00400000||Batch time: 0.7672 sec.
+Epoch:6||epochiter: 15/193||Totel iter: 980||ssim loss:-0.9576;||LR: 0.00400000||Batch time: 0.7722 sec.
+Epoch:6||epochiter: 25/193||Totel iter: 990||ssim loss:-0.9392;||LR: 0.00400000||Batch time: 0.7731 sec.
+Epoch:6||epochiter: 35/193||Totel iter: 1000||ssim loss:-0.8722;||LR: 0.00400000||Batch time: 0.7675 sec.
+Epoch:6||epochiter: 45/193||Totel iter: 1010||ssim loss:-0.9293;||LR: 0.00400000||Batch time: 0.7657 sec.
+Epoch:6||epochiter: 55/193||Totel iter: 1020||ssim loss:-0.9437;||LR: 0.00400000||Batch time: 0.8065 sec.
+Epoch:6||epochiter: 65/193||Totel iter: 1030||ssim loss:-0.9363;||LR: 0.00400000||Batch time: 0.7728 sec.
+Epoch:6||epochiter: 75/193||Totel iter: 1040||ssim loss:-0.9517;||LR: 0.00400000||Batch time: 0.7775 sec.
+Epoch:6||epochiter: 85/193||Totel iter: 1050||ssim loss:-0.9491;||LR: 0.00400000||Batch time: 0.7665 sec.
+Epoch:6||epochiter: 95/193||Totel iter: 1060||ssim loss:-0.9567;||LR: 0.00400000||Batch time: 0.7891 sec.
+Epoch:6||epochiter: 105/193||Totel iter: 1070||ssim loss:-0.9586;||LR: 0.00400000||Batch time: 0.7779 sec.
+Epoch:6||epochiter: 115/193||Totel iter: 1080||ssim loss:-0.9621;||LR: 0.00400000||Batch time: 0.7639 sec.
+Epoch:6||epochiter: 125/193||Totel iter: 1090||ssim loss:-0.9492;||LR: 0.00400000||Batch time: 0.7394 sec.
+Epoch:6||epochiter: 135/193||Totel iter: 1100||ssim loss:-0.9594;||LR: 0.00400000||Batch time: 0.7868 sec.
+Epoch:6||epochiter: 145/193||Totel iter: 1110||ssim loss:-0.9676;||LR: 0.00400000||Batch time: 0.7636 sec.
+Epoch:6||epochiter: 155/193||Totel iter: 1120||ssim loss:-0.9652;||LR: 0.00400000||Batch time: 0.7805 sec.
+Epoch:6||epochiter: 165/193||Totel iter: 1130||ssim loss:-0.9635;||LR: 0.00400000||Batch time: 0.7712 sec.
+Epoch:6||epochiter: 175/193||Totel iter: 1140||ssim loss:-0.9659;||LR: 0.00400000||Batch time: 0.7803 sec.
+Epoch:6||epochiter: 185/193||Totel iter: 1150||ssim loss:-0.9543;||LR: 0.00400000||Batch time: 0.7583 sec.
+Epoch:7||epochiter: 2/193||Totel iter: 1160||ssim loss:-0.9731;||LR: 0.00400000||Batch time: 0.7383 sec.
+Epoch:7||epochiter: 12/193||Totel iter: 1170||ssim loss:-0.9490;||LR: 0.00400000||Batch time: 0.7860 sec.
+Epoch:7||epochiter: 22/193||Totel iter: 1180||ssim loss:-0.9656;||LR: 0.00400000||Batch time: 0.7733 sec.
+Epoch:7||epochiter: 32/193||Totel iter: 1190||ssim loss:-0.9681;||LR: 0.00400000||Batch time: 0.7951 sec.
+Epoch:7||epochiter: 42/193||Totel iter: 1200||ssim loss:-0.9725;||LR: 0.00400000||Batch time: 0.7668 sec.
+Epoch:7||epochiter: 52/193||Totel iter: 1210||ssim loss:-0.9673;||LR: 0.00400000||Batch time: 0.7743 sec.
+Epoch:7||epochiter: 62/193||Totel iter: 1220||ssim loss:-0.9734;||LR: 0.00400000||Batch time: 0.7855 sec.
+Epoch:7||epochiter: 72/193||Totel iter: 1230||ssim loss:-0.9724;||LR: 0.00400000||Batch time: 0.7697 sec.
+Epoch:7||epochiter: 82/193||Totel iter: 1240||ssim loss:-0.9667;||LR: 0.00400000||Batch time: 0.7968 sec.
+Epoch:7||epochiter: 92/193||Totel iter: 1250||ssim loss:-0.9700;||LR: 0.00400000||Batch time: 0.7713 sec.
+Epoch:7||epochiter: 102/193||Totel iter: 1260||ssim loss:-0.9724;||LR: 0.00400000||Batch time: 0.7630 sec.
+Epoch:7||epochiter: 112/193||Totel iter: 1270||ssim loss:-0.9639;||LR: 0.00400000||Batch time: 0.7690 sec.
+Epoch:7||epochiter: 122/193||Totel iter: 1280||ssim loss:-0.9520;||LR: 0.00400000||Batch time: 0.7830 sec.
+Epoch:7||epochiter: 132/193||Totel iter: 1290||ssim loss:-0.9692;||LR: 0.00400000||Batch time: 0.7529 sec.
+Epoch:7||epochiter: 142/193||Totel iter: 1300||ssim loss:-0.9769;||LR: 0.00400000||Batch time: 0.8003 sec.
+Epoch:7||epochiter: 152/193||Totel iter: 1310||ssim loss:-0.9657;||LR: 0.00400000||Batch time: 0.7740 sec.
+Epoch:7||epochiter: 162/193||Totel iter: 1320||ssim loss:-0.9656;||LR: 0.00400000||Batch time: 0.7358 sec.
+Epoch:7||epochiter: 172/193||Totel iter: 1330||ssim loss:-0.9629;||LR: 0.00400000||Batch time: 0.7757 sec.
+Epoch:7||epochiter: 182/193||Totel iter: 1340||ssim loss:-0.9702;||LR: 0.00400000||Batch time: 0.7765 sec.
+Epoch:7||epochiter: 192/193||Totel iter: 1350||ssim loss:-0.9723;||LR: 0.00400000||Batch time: 0.7747 sec.
+Epoch:8||epochiter: 9/193||Totel iter: 1360||ssim loss:-0.9659;||LR: 0.00400000||Batch time: 0.7844 sec.
+Epoch:8||epochiter: 19/193||Totel iter: 1370||ssim loss:-0.9720;||LR: 0.00400000||Batch time: 0.7783 sec.
+Epoch:8||epochiter: 29/193||Totel iter: 1380||ssim loss:-0.9712;||LR: 0.00400000||Batch time: 0.7788 sec.
+Epoch:8||epochiter: 39/193||Totel iter: 1390||ssim loss:-0.9734;||LR: 0.00400000||Batch time: 0.7501 sec.
+Epoch:8||epochiter: 49/193||Totel iter: 1400||ssim loss:-0.9746;||LR: 0.00400000||Batch time: 0.7549 sec.
+Epoch:8||epochiter: 59/193||Totel iter: 1410||ssim loss:-0.9765;||LR: 0.00400000||Batch time: 0.7830 sec.
+Epoch:8||epochiter: 69/193||Totel iter: 1420||ssim loss:-0.9723;||LR: 0.00400000||Batch time: 0.7822 sec.
+Epoch:8||epochiter: 79/193||Totel iter: 1430||ssim loss:-0.9765;||LR: 0.00400000||Batch time: 0.7452 sec.
+Epoch:8||epochiter: 89/193||Totel iter: 1440||ssim loss:-0.9592;||LR: 0.00400000||Batch time: 0.7783 sec.
+Epoch:8||epochiter: 99/193||Totel iter: 1450||ssim loss:-0.9576;||LR: 0.00400000||Batch time: 0.7767 sec.
+Epoch:8||epochiter: 109/193||Totel iter: 1460||ssim loss:-0.9730;||LR: 0.00400000||Batch time: 0.7764 sec.
+Epoch:8||epochiter: 119/193||Totel iter: 1470||ssim loss:-0.9703;||LR: 0.00400000||Batch time: 0.7801 sec.
+Epoch:8||epochiter: 129/193||Totel iter: 1480||ssim loss:-0.9687;||LR: 0.00400000||Batch time: 0.7674 sec.
+Epoch:8||epochiter: 139/193||Totel iter: 1490||ssim loss:-0.9682;||LR: 0.00400000||Batch time: 0.7815 sec.
+Epoch:8||epochiter: 149/193||Totel iter: 1500||ssim loss:-0.9706;||LR: 0.00400000||Batch time: 0.7776 sec.
+Epoch:8||epochiter: 159/193||Totel iter: 1510||ssim loss:-0.9537;||LR: 0.00400000||Batch time: 0.7809 sec.
+Epoch:8||epochiter: 169/193||Totel iter: 1520||ssim loss:-0.9608;||LR: 0.00400000||Batch time: 0.7895 sec.
+Epoch:8||epochiter: 179/193||Totel iter: 1530||ssim loss:-0.9753;||LR: 0.00400000||Batch time: 0.7627 sec.
+Epoch:8||epochiter: 189/193||Totel iter: 1540||ssim loss:-0.9705;||LR: 0.00400000||Batch time: 0.7520 sec.
+Epoch:9||epochiter: 6/193||Totel iter: 1550||ssim loss:-0.9584;||LR: 0.00400000||Batch time: 0.7783 sec.
+Epoch:9||epochiter: 16/193||Totel iter: 1560||ssim loss:-0.9689;||LR: 0.00400000||Batch time: 0.7896 sec.
+Epoch:9||epochiter: 26/193||Totel iter: 1570||ssim loss:-0.9716;||LR: 0.00400000||Batch time: 0.7841 sec.
+Epoch:9||epochiter: 36/193||Totel iter: 1580||ssim loss:-0.9752;||LR: 0.00400000||Batch time: 0.7434 sec.
+Epoch:9||epochiter: 46/193||Totel iter: 1590||ssim loss:-0.9738;||LR: 0.00400000||Batch time: 0.7742 sec.
+Epoch:9||epochiter: 56/193||Totel iter: 1600||ssim loss:-0.9743;||LR: 0.00400000||Batch time: 0.7778 sec.
+Epoch:9||epochiter: 66/193||Totel iter: 1610||ssim loss:-0.9793;||LR: 0.00400000||Batch time: 0.7714 sec.
+Epoch:9||epochiter: 76/193||Totel iter: 1620||ssim loss:-0.9769;||LR: 0.00400000||Batch time: 0.7768 sec.
+Epoch:9||epochiter: 86/193||Totel iter: 1630||ssim loss:-0.9671;||LR: 0.00400000||Batch time: 0.7433 sec.
+Epoch:9||epochiter: 96/193||Totel iter: 1640||ssim loss:-0.9750;||LR: 0.00400000||Batch time: 0.7726 sec.
+Epoch:9||epochiter: 106/193||Totel iter: 1650||ssim loss:-0.9761;||LR: 0.00400000||Batch time: 0.7638 sec.
+Epoch:9||epochiter: 116/193||Totel iter: 1660||ssim loss:-0.9668;||LR: 0.00400000||Batch time: 0.7729 sec.
+Epoch:9||epochiter: 126/193||Totel iter: 1670||ssim loss:-0.9714;||LR: 0.00400000||Batch time: 0.7744 sec.
+Epoch:9||epochiter: 136/193||Totel iter: 1680||ssim loss:-0.9775;||LR: 0.00400000||Batch time: 0.7543 sec.
+Epoch:9||epochiter: 146/193||Totel iter: 1690||ssim loss:-0.9773;||LR: 0.00400000||Batch time: 0.7841 sec.
+Epoch:9||epochiter: 156/193||Totel iter: 1700||ssim loss:-0.9739;||LR: 0.00400000||Batch time: 0.7740 sec.
+Epoch:9||epochiter: 166/193||Totel iter: 1710||ssim loss:-0.9679;||LR: 0.00400000||Batch time: 0.7651 sec.
+Epoch:9||epochiter: 176/193||Totel iter: 1720||ssim loss:-0.9757;||LR: 0.00400000||Batch time: 0.7718 sec.
+Epoch:9||epochiter: 186/193||Totel iter: 1730||ssim loss:-0.9742;||LR: 0.00400000||Batch time: 0.7739 sec.
+Epoch:10||epochiter: 3/193||Totel iter: 1740||ssim loss:-0.9767;||LR: 0.00400000||Batch time: 0.7702 sec.
+Epoch:10||epochiter: 13/193||Totel iter: 1750||ssim loss:-0.9761;||LR: 0.00400000||Batch time: 0.7566 sec.
+Epoch:10||epochiter: 23/193||Totel iter: 1760||ssim loss:-0.9791;||LR: 0.00400000||Batch time: 0.7477 sec.
+Epoch:10||epochiter: 33/193||Totel iter: 1770||ssim loss:-0.9710;||LR: 0.00400000||Batch time: 0.7865 sec.
+Epoch:10||epochiter: 43/193||Totel iter: 1780||ssim loss:-0.9763;||LR: 0.00400000||Batch time: 0.7783 sec.
+Epoch:10||epochiter: 53/193||Totel iter: 1790||ssim loss:-0.9783;||LR: 0.00400000||Batch time: 0.7744 sec.
+Epoch:10||epochiter: 63/193||Totel iter: 1800||ssim loss:-0.9811;||LR: 0.00400000||Batch time: 0.7996 sec.
+Epoch:10||epochiter: 73/193||Totel iter: 1810||ssim loss:-0.9689;||LR: 0.00400000||Batch time: 0.7361 sec.
+Epoch:10||epochiter: 83/193||Totel iter: 1820||ssim loss:-0.9702;||LR: 0.00400000||Batch time: 0.7856 sec.
+Epoch:10||epochiter: 93/193||Totel iter: 1830||ssim loss:-0.9681;||LR: 0.00400000||Batch time: 0.7517 sec.
+Epoch:10||epochiter: 103/193||Totel iter: 1840||ssim loss:-0.9732;||LR: 0.00400000||Batch time: 0.7578 sec.
+Epoch:10||epochiter: 113/193||Totel iter: 1850||ssim loss:-0.9794;||LR: 0.00400000||Batch time: 0.7714 sec.
+Epoch:10||epochiter: 123/193||Totel iter: 1860||ssim loss:-0.9771;||LR: 0.00400000||Batch time: 0.7650 sec.
+Epoch:10||epochiter: 133/193||Totel iter: 1870||ssim loss:-0.9763;||LR: 0.00400000||Batch time: 0.7740 sec.
+Epoch:10||epochiter: 143/193||Totel iter: 1880||ssim loss:-0.9745;||LR: 0.00400000||Batch time: 0.7748 sec.
+Epoch:10||epochiter: 153/193||Totel iter: 1890||ssim loss:-0.9769;||LR: 0.00400000||Batch time: 0.7600 sec.
+Epoch:10||epochiter: 163/193||Totel iter: 1900||ssim loss:-0.9766;||LR: 0.00400000||Batch time: 0.7730 sec.
+Epoch:10||epochiter: 173/193||Totel iter: 1910||ssim loss:-0.9808;||LR: 0.00400000||Batch time: 0.7755 sec.
+Epoch:10||epochiter: 183/193||Totel iter: 1920||ssim loss:-0.9794;||LR: 0.00400000||Batch time: 0.7790 sec.
+Epoch:11||epochiter: 0/193||Totel iter: 1930||ssim loss:-0.9723;||LR: 0.00400000||Batch time: 0.7651 sec.
+Epoch:11||epochiter: 10/193||Totel iter: 1940||ssim loss:-0.9787;||LR: 0.00400000||Batch time: 0.7325 sec.
+Epoch:11||epochiter: 20/193||Totel iter: 1950||ssim loss:-0.9773;||LR: 0.00400000||Batch time: 0.7768 sec.
+Epoch:11||epochiter: 30/193||Totel iter: 1960||ssim loss:-0.9735;||LR: 0.00400000||Batch time: 0.7702 sec.
+Epoch:11||epochiter: 40/193||Totel iter: 1970||ssim loss:-0.9741;||LR: 0.00400000||Batch time: 0.7747 sec.
+Epoch:11||epochiter: 50/193||Totel iter: 1980||ssim loss:-0.9795;||LR: 0.00400000||Batch time: 0.7707 sec.
+Epoch:11||epochiter: 60/193||Totel iter: 1990||ssim loss:-0.9709;||LR: 0.00400000||Batch time: 0.7890 sec.
+Epoch:11||epochiter: 70/193||Totel iter: 2000||ssim loss:-0.9729;||LR: 0.00400000||Batch time: 0.7657 sec.
+Epoch:11||epochiter: 80/193||Totel iter: 2010||ssim loss:-0.9677;||LR: 0.00400000||Batch time: 0.7698 sec.
+Epoch:11||epochiter: 90/193||Totel iter: 2020||ssim loss:-0.9728;||LR: 0.00400000||Batch time: 0.7594 sec.
+Epoch:11||epochiter: 100/193||Totel iter: 2030||ssim loss:-0.9711;||LR: 0.00400000||Batch time: 0.7640 sec.
+Epoch:11||epochiter: 110/193||Totel iter: 2040||ssim loss:-0.9765;||LR: 0.00400000||Batch time: 0.7714 sec.
+Epoch:11||epochiter: 120/193||Totel iter: 2050||ssim loss:-0.9744;||LR: 0.00400000||Batch time: 0.7759 sec.
+Epoch:11||epochiter: 130/193||Totel iter: 2060||ssim loss:-0.9805;||LR: 0.00400000||Batch time: 0.7655 sec.
+Epoch:11||epochiter: 140/193||Totel iter: 2070||ssim loss:-0.9766;||LR: 0.00400000||Batch time: 0.7712 sec.
+Epoch:11||epochiter: 150/193||Totel iter: 2080||ssim loss:-0.9743;||LR: 0.00400000||Batch time: 0.7559 sec.
+Epoch:11||epochiter: 160/193||Totel iter: 2090||ssim loss:-0.9762;||LR: 0.00400000||Batch time: 0.7746 sec.
+Epoch:11||epochiter: 170/193||Totel iter: 2100||ssim loss:-0.9810;||LR: 0.00400000||Batch time: 0.7723 sec.
+Epoch:11||epochiter: 180/193||Totel iter: 2110||ssim loss:-0.9801;||LR: 0.00400000||Batch time: 0.7752 sec.
+Epoch:11||epochiter: 190/193||Totel iter: 2120||ssim loss:-0.9775;||LR: 0.00400000||Batch time: 0.7642 sec.
