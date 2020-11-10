@@ -19,14 +19,14 @@
     },
     "db": {
         "name": "mvtec",
-        "data_dir": "D:/DataSet/mvtec_anomaly_detection",
+        "data_dir": "./data",
         "loader_threads": 4,
         "train_split": "train",
-        "use_validation_set": true,
+        "use_validation_set": false,
         "validation_split": "validation",
         "val_split": "test",
-        "resize": [256, 256],
-        "batch_size": 2
+        "resize": [128, 128],
+        "batch_size": 128
     },
     "system": {
         "resume": false,

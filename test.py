@@ -13,10 +13,10 @@ from db.eval_func import cal_good_index
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Object detection base on anchor.')
-    parser.add_argument('--cfg', help="Path of config file", type=str, required=True)
-    parser.add_argument('--model_path', help="Path of model", type=str,required=True)
+    parser.add_argument('--cfg', help="Path of config file", type=str, default='RED_Net_4skips-mvtec')
+    parser.add_argument('--model_path', help="Path of model", type=str,default="weights/RED_Net_4skips-mvtec-20.pth")
     parser.add_argument('--gpu_id', help="ID of GPU", type=int, default=0)
-    parser.add_argument('--res_dir', help="Directory path of result", type=str, default='./eval_result')
+    parser.add_argument('--res_dir', help="Directory path of result", type=str, default='./eval_result/rednet4')
     parser.add_argument('--retest', default=False, type=bool)
 
     return parser.parse_args()
@@ -70,6 +70,7 @@ def test_mvtec(test_set, rebuilder, transform, save_dir, threshold_seg_dict, val
             _time = list()
             img_list = item_dict[type]
             for path in img_list:
+
                 image = cv2.imread(path, cv2.IMREAD_COLOR)
                 ori_h, ori_w, _ = image.shape
                 _t.tic()
@@ -86,7 +87,8 @@ def test_mvtec(test_set, rebuilder, transform, save_dir, threshold_seg_dict, val
                     raise Exception("Invalid val_index")
 
                 inference_time = _t.toc()
-                img_id = path.split('.')[0][-3:]
+                # img_id = path.split('.')[0][-3:]
+                img_id=os.path.basename(path)[:-4]
                 cv2.imwrite(os.path.join(save_dir, item, 'ori', type, '{}.png'.format(img_id)), ori_img)
                 cv2.imwrite(os.path.join(save_dir, item, 'gen', type, '{}.png'.format(img_id)), re_img)
                 cv2.imwrite(os.path.join(save_dir, item, 'mask', type, '{}.png'.format(img_id)), mask)
